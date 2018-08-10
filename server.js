@@ -9,8 +9,8 @@ exphbs = require('express-handlebars'),
 	util = require('util'),
 	jquery = require('jquery');
 
-let Post = require('./models/postModel'),
-	Opinion = require('./models/opinionModel.js');
+let Post = require('./app/models/postModel'),
+	Opinion = require('./app/models/opinionModel.js');
 // Mongoose mpromise deprecated - use bluebird promises
 let Promise = require("bluebird");
 
@@ -38,6 +38,7 @@ app.use(express.static("public"));
 
 // Database configuration with mongoose
 mongoose.connect("mongodb://HRFoxhill:Never4get@ds153719.mlab.com:53719/heroku_fpg8rrcq");
+//command for git bash
 // mongoose.connect("mongo ds153719.mlab.com:53719/heroku_fpg8rrcq -u HRFoxhill -p Never4get");
 
 let db = mongoose.connection;
