@@ -1,0 +1,18 @@
+<div class="container-fluid container-detail">
+	<div class="row">
+		{{#post}}
+		<div class="col col-sm-6 col-post">
+			<h3 data-obj-id="{{post._id}}">{{headline}}</h3>
+			<p>{{date}}</p>
+			<p>{{post}}</p>
+			<button type="button" class="btn btn-large btn-view-full"><a href="{{post.link}}" target="_blank">View Full Post</a></button>
+		</div><!-- /col-post -->
+		{{/post}}
+		{{#if showOpinion}}
+			{{> answers}}
+		{{else}}
+			{{> questions}}
+		{{/if}}
+
+		</div><!-- /row -->
+</div><!-- /container-posts -->

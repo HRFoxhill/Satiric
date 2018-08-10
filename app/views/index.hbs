@@ -1,0 +1,13 @@
+<div class="container-fluid container-posts">
+	<div class="row row-post grid">
+{{#each post}}
+	<div class="col col-sm-3 col-single-post">
+		<h3 data-obj-id="{{_id}}">{{headline}}</h3>
+		<p>{{link}}</p>
+		<p>{{date}}</p>
+		<p src="{{_id}}">{{post}}</p>
+	</div><!-- /col-single-post -->
+{{/each}}
+
+	</div><!-- /row -->
+</div><!-- /container-posts -->
